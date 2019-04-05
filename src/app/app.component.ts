@@ -18,6 +18,10 @@ export class AppComponent {
   // }
 
   onSubmit() {
+    console.log(this.myForm);
     console.log(this.myForm.value);
   }
 }
+
+
+// https://angular.io/api/forms/Validators
