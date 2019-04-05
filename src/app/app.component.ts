@@ -12,8 +12,27 @@ export class AppComponent {
   answer = '';
   genders = ['male', 'female'];
 
+
   suggestUserName() {
+    const suggestedName = 'sample name';
+    this.myForm.form.patchValue({
+      userData: {
+        username: suggestedName
+      }
+    });
+  }
+
+  suggestAll(){
     const suggestedName = 'Superuser';
+    this.myForm.setValue({
+      userData: {
+        username: suggestedName,
+        email: 'aaa@bbb.com',
+      },
+      gender: 'female',
+      answer: 'sample answer',
+      secret: 'teacher'
+    });
   }
 
   // onSubmit(form: NgForm) {
