@@ -44,6 +44,15 @@ export class AppComponent {
     console.log(this.myForm.value);
   }
 
+  resetForm() {
+    this.myForm.resetForm();
+    //this.myForm.reset();
+  }
+
+  resetAnswer() {
+    this.myForm.controls['answer'].reset();
+  }
+
 }
 
 
